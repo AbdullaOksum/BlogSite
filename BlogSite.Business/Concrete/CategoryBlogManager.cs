@@ -11,10 +11,10 @@ namespace BlogSite.Business.Concrete
 {
     public class CategoryBlogManager : GenericManager<CategoryBlog>, ICategoryBlogService
     {
-        private readonly IGenericDal<CategoryBlog> _categoryDal;
+        private readonly IGenericDal<CategoryBlog> _genericDal;
         public CategoryBlogManager(IGenericDal<CategoryBlog> category) : base(category)
         {
-            _categoryDal = category;
+            _genericDal = category;
         }
     }
 }
