@@ -63,6 +63,10 @@ namespace BlogSite.DataAccess.Concrete.EntityFrameworkCore.Repository
             return await context.Set<TEntity>().FirstOrDefaultAsync(filter);
         }
 
-        
+        public async Task<TEntity> FindByIdAsync(int id)
+        {
+            using var context = new BlogSiteContext();
+            return await context.FindAsync<TEntity>(id);
+        }
     }
 }
