@@ -40,8 +40,6 @@ namespace BlogSite.Business.Concrete
             return await _generiService.GetAllAsync();
         }
 
-       
-
         public async Task UpdateAsync(TEntity entity)
         {
          await _generiService.UpdateAsync(entity);

@@ -9,5 +9,6 @@ namespace BlogSite.Business.Interfaces
 {
     public interface ICategoryService : IGenericService<Category>
     {
+        Task<List<Category>> GetAllSortedByIdAsync();
     }
 }
